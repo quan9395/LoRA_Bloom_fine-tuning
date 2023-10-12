@@ -26,7 +26,7 @@ def tokenise_data(dataset, tokenizer, max_seq_length=512):
             tokenizer.encode(
                 elem["text"],
                 max_length=max_seq_length,
-                padding=True,
+                padding='max_length',
                 truncation=True,
             )
         )
